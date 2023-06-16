@@ -3,7 +3,7 @@ import { getUsers } from '../../domain/useCases/getUsers';
 import userRepositoryFake from '../../infra/repository/userRepositoryFake';
 import { type FetcherInterface } from '../../domain/data/fetcherInterface';
 import { type UserEntity } from '../../domain/entities/user';
-import useSwrFetcher from '../data/useSwrFetcher';
+import useReactQueryFetcher from '../data/useReactQueryFetcher';
 
 const UserListContainer = ({
   useFetcher,
@@ -18,7 +18,7 @@ const UserListContainer = ({
 };
 
 const propsToMap = {
-  useFetcher: useSwrFetcher,
+  useFetcher: useReactQueryFetcher,
   getUsersUseCase: getUsers(userRepositoryFake()),
 };
 
