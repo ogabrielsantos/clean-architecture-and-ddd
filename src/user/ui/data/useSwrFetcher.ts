@@ -5,7 +5,7 @@ import {
 } from '../../domain/data/fetcherInterface';
 
 function useSwrFetcher<T>(
-  key: string | null,
+  key: string,
   promise: FetcherPromise<T>,
 ): FetcherResponse<T> {
   const { data, error, isLoading } = useSWR(key, promise);

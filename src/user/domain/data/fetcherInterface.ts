@@ -6,7 +6,7 @@ interface FetcherResponse<T> {
 
 type FetcherPromise<T> = () => Promise<T>;
 type FetcherInterface<T> = (
-  key: string | null,
+  key: string,
   promise: FetcherPromise<T>,
 ) => FetcherResponse<T>;
 
